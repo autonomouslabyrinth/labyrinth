@@ -1,1 +1,2 @@
+scikit-image==0.14.2
 wiringpi==2.46.0
