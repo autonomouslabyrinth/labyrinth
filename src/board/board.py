@@ -1,3 +1,23 @@
-import cv2
+import os
+from skimage import io
 
-img = cv2.imread('../../images/image1.jpeg',0) #o--b/w
+class Board:
+	def __init__(self, path, filename):
+		image_path = os.path.join(path, filename)
+		self.image = io.imread(image_path)
+
+	def detect_circles(self):
+		self.circles = []
+		c = Circle(4, 4, 3)
+		self.circles.push(c)
+
+class Circle:
+	def __init__(self, x, y, r):
+		self.x = x
+		self.y = y
+		self.r = r
+
+	def update_circle(self, x, y, r):
+		pass
+
+ 
