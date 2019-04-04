@@ -9,7 +9,11 @@ class Board:
 	def detect_circles(self):
 		self.circles = []
 		c = Circle(4, 4, 3)
-		self.circles.push(c)
+		self.circles.append(c)
+
+	def print_circles(self):
+		for circle in self.circles:
+			print(circle)
 
 class Circle:
 	def __init__(self, x, y, r):
