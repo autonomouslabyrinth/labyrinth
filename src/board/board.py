@@ -9,6 +9,7 @@ class Board:
 	def detect_circles(self):
 		self.circles = []
 		c = Circle(4, 4, 3)
+		edges = canny(image)  # TODO: thresholds might need to be changed for video feed hysteris
 		self.circles.append(c)
 
 	def print_circles(self):
