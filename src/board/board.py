@@ -1,15 +1,10 @@
-import os
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-from skimage import io
-from skimage.feature import canny
-from skimage.util import img_as_ubyte
-from skimage.color import rgb2gray
-from skimage.transform import hough_circle, hough_circle_peaks
-
 # TODO: implement this https://www.youtube.com/watch?v=-o9jNEbR5P8
+image = '../../image1.png' 
+img = cv2.imread(image, 1)
 
 class Board:
 	def __init__(self, path, filename):
