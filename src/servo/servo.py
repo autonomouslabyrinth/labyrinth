@@ -1,4 +1,6 @@
 import wiringpi
+from ball.ball import Ball
+from board.board import Point
 
 class Servo:
 	FREQUENCY = 192
@@ -6,7 +8,7 @@ class Servo:
 	DELAY_PERIOD = 0.01
 	FORWARD = 100
 	BACKWARD = 200
-	STOP = 2000
+	STOP = 0
 
 	def __init__(self, pin):
 		self.pin = pin
@@ -29,3 +31,16 @@ class Servo:
 	def move_backward(self, msecs):
 		for count in range(msecs):				 
 			self.wiring.pwmWrite(self.pin, BACKWARD)
+
+
+class Servos:
+
+	def __init(self):
+		# Initialize horizontal and vertical servo
+		self.horizontal = Servo(12)
+		self.vertical = Servo(13)
+		pass
+
+	def move(self, ball, point):
+		# Adjust servos given ball and point
+		pass

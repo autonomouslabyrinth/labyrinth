@@ -6,17 +6,16 @@ from servo.servo import Servos
 
 def run():
     # Initialize objects
-    frm = Frames()
-    brd = Board(frm.top())
-    bal = Ball()
-    bal.update(frm.top())
+    frms = Frames()
+    brd = Board(frms.top())
+    bal = Ball(frms.top())
     srvs = Servos()      # TODO: pass in param to initializer
 
     # Loop until finished
     while not bal.finished():
 
         # Determine waypoint
-        if bal.online():
+        if bal.online(brd.lines()):
             pnt = brd.nearest_corner()
         else:
             pnt = brd.nearest_point() # Snap to line
@@ -25,7 +24,7 @@ def run():
         srvs.move(bal, pnt)
 
         # Update
-        bal.update(frm.top())
+        bal.update(frms.top())
 
 
 if __name__ == "__main__":
