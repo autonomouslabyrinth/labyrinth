@@ -24,7 +24,7 @@ sensor.set_pixformat(sensor.GRAYSCALE)
 face_cascade = image.HaarCascade("frontalface", stages=25)
 print(face_cascade)
 
-# Skip a few frames to allow the sensor settle down
+# Skip a few camera to allow the sensor settle down
 # Note: This takes more time when exec from the IDE.
 for i in range(0, 30):
     img = sensor.snapshot()

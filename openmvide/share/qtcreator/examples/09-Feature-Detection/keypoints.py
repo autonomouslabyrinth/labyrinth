@@ -1,6 +1,6 @@
 # Object tracking with keypoints example.
 # Show the camera an object and then run the script. A set of keypoints will be extracted
-# once and then tracked in the following frames. If you want a new set of keypoints re-run
+# once and then tracked in the following camera. If you want a new set of keypoints re-run
 # the script. NOTE: see the docs for arguments to tune find_keypoints and match_keypoints.
 import sensor, time, image
 

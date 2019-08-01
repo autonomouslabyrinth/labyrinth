@@ -3,7 +3,7 @@
 # Note: You will need an SD card to run this example.
 #
 # You can use your OpenMV Cam to record gif files. You can either feed the
-# recorder object RGB565 frames or Grayscale frames. Use photo editing software
+# recorder object RGB565 camera or Grayscale camera. Use photo editing software
 # like GIMP to compress and optimize the Gif before uploading it to the web.
 
 import sensor, image, time, gif, pyb
@@ -28,7 +28,7 @@ g = gif.Gif("example.gif", loop=True)
 print("You're on camera!")
 for i in range(100):
     clock.tick()
-    # clock.avg() returns the milliseconds between frames - gif delay is in
+    # clock.avg() returns the milliseconds between camera - gif delay is in
     g.add_frame(sensor.snapshot(), delay=int(clock.avg()/10)) # centiseconds.
     print(clock.fps())
 

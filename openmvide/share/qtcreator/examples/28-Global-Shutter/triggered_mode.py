@@ -8,7 +8,7 @@
 # of rows in the image. Additionally, sensor noise is reduced in triggered mode as the camera will
 # not read out rows until after exposing which results in a higher quality image.
 #
-# That said, your maximum frame rate will be reduced by 2 to 3 as frames are no longer generated
+# That said, your maximum frame rate will be reduced by 2 to 3 as camera are no longer generated
 # continously by the camera and because you have to wait for the integration to finish before
 # readout of the frame.
 

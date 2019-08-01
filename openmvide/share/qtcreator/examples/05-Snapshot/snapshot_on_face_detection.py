@@ -33,7 +33,7 @@ while(True):
     print("Now detecting faces!")
     pyb.LED(BLUE_LED_PIN).on()
 
-    diff = 10 # We'll say we detected a face after 10 frames.
+    diff = 10 # We'll say we detected a face after 10 camera.
     while(diff):
         img = sensor.snapshot()
         # Threshold can be between 0.0 and 1.0. A higher threshold results in a

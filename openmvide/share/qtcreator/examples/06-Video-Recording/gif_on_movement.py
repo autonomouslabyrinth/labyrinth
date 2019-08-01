@@ -3,7 +3,7 @@
 # Note: You will need an SD card to run this example.
 #
 # You can use your OpenMV Cam to record gif files. You can either feed the
-# recorder object RGB565 frames or Grayscale frames. Use photo editing software
+# recorder object RGB565 camera or Grayscale camera. Use photo editing software
 # like GIMP to compress and optimize the Gif before uploading it to the web.
 #
 # This example demonstrates using frame differencing with your OpenMV Cam to do
@@ -33,7 +33,7 @@ while(True):
     print("Saved background image - Now detecting motion!")
     pyb.LED(BLUE_LED_PIN).on()
 
-    diff = 10 # We'll say we detected motion after 10 frames of motion.
+    diff = 10 # We'll say we detected motion after 10 camera of motion.
     while(diff):
         img = sensor.snapshot()
         img.difference("temp/bg.bmp")
@@ -50,7 +50,7 @@ while(True):
     print("You're on camera!")
     for i in range(100):
         clock.tick()
-        # clock.avg() returns the milliseconds between frames - gif delay is in
+        # clock.avg() returns the milliseconds between camera - gif delay is in
         g.add_frame(sensor.snapshot(), delay=int(clock.avg()/10)) # centiseconds.
         print(clock.fps())
 

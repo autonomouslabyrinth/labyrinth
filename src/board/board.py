@@ -1,5 +1,5 @@
 class Board:
-	def __init__(self, img):
+	def __init__(self, cam_data):
 		self.lines = []
 		# TODO determine black lines
 		pass

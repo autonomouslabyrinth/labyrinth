@@ -3,7 +3,7 @@
 # Note: You will need an SD card to run this example.
 #
 # You can use your OpenMV Cam to record mjpeg files. You can either feed the
-# recorder object JPEG frames or RGB565/Grayscale frames. Once you've finished
+# recorder object JPEG camera or RGB565/Grayscale camera. Once you've finished
 # recording a Mjpeg file you can use VLC to play it. If you are on Ubuntu then
 # the built-in video player will work too.
 #
@@ -34,7 +34,7 @@ while(True):
     print("Saved background image - Now detecting motion!")
     pyb.LED(BLUE_LED_PIN).on()
 
-    diff = 10 # We'll say we detected motion after 10 frames of motion.
+    diff = 10 # We'll say we detected motion after 10 camera of motion.
     while(diff):
         img = sensor.snapshot()
         img.difference("temp/bg.bmp")

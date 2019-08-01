@@ -3,7 +3,7 @@
 # Note: You will need an SD card to run this example.
 #
 # You can use your OpenMV Cam to record mjpeg files. You can either feed the
-# recorder object JPEG frames or RGB565/Grayscale frames. Once you've finished
+# recorder object JPEG camera or RGB565/Grayscale camera. Once you've finished
 # recording a Mjpeg file you can use VLC to play it. If you are on Ubuntu then
 # the built-in video player will work too.
 #
@@ -38,7 +38,7 @@ while(True):
     print("Now detecting faces!")
     pyb.LED(BLUE_LED_PIN).on()
 
-    diff = 10 # We'll say we detected a face after 10 frames.
+    diff = 10 # We'll say we detected a face after 10 camera.
     while(diff):
         img = sensor.snapshot()
         # Threshold can be between 0.0 and 1.0. A higher threshold results in a

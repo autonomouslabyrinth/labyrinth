@@ -20,7 +20,7 @@ sensor.set_pixformat(sensor.RGB565)
 # Enable colorbar test mode
 sensor.set_colorbar(True)
 
-# Skip a few frames to allow the sensor settle down
+# Skip a few camera to allow the sensor settle down
 for i in range(0, 30):
     image = sensor.snapshot()
 

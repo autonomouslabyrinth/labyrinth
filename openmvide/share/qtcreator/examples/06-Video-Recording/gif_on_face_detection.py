@@ -3,7 +3,7 @@
 # Note: You will need an SD card to run this example.
 #
 # You can use your OpenMV Cam to record gif files. You can either feed the
-# recorder object RGB565 frames or Grayscale frames. Use photo editing software
+# recorder object RGB565 camera or Grayscale camera. Use photo editing software
 # like GIMP to compress and optimize the Gif before uploading it to the web.
 #
 # This example demonstrates using face tracking on your OpenMV Cam to take a
@@ -37,7 +37,7 @@ while(True):
     print("Now detecting faces!")
     pyb.LED(BLUE_LED_PIN).on()
 
-    diff = 10 # We'll say we detected a face after 10 frames.
+    diff = 10 # We'll say we detected a face after 10 camera.
     while(diff):
         img = sensor.snapshot()
         # Threshold can be between 0.0 and 1.0. A higher threshold results in a
@@ -56,7 +56,7 @@ while(True):
     print("You're on camera!")
     for i in range(100):
         clock.tick()
-        # clock.avg() returns the milliseconds between frames - gif delay is in
+        # clock.avg() returns the milliseconds between camera - gif delay is in
         g.add_frame(sensor.snapshot(), delay=int(clock.avg()/10)) # centiseconds.
         print(clock.fps())
 

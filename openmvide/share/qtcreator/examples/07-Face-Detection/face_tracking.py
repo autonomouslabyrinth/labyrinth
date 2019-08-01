@@ -15,7 +15,7 @@ sensor.set_framesize(sensor.VGA)
 sensor.set_windowing((320, 240))
 sensor.set_pixformat(sensor.GRAYSCALE)
 
-# Skip a few frames to allow the sensor settle down
+# Skip a few camera to allow the sensor settle down
 sensor.skip_frames(time = 2000)
 
 # Load Haar Cascade

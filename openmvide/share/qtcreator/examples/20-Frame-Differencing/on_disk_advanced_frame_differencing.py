@@ -10,7 +10,7 @@ import sensor, image, pyb, os, time
 
 TRIGGER_THRESHOLD = 5
 
-BG_UPDATE_FRAMES = 50 # How many frames before blending.
+BG_UPDATE_FRAMES = 50 # How many camera before blending.
 BG_UPDATE_BLEND = 128 # How much to blend by... ([0-256]==[0.0-1.0]).
 
 sensor.reset() # Initialize the camera sensor.

@@ -18,7 +18,7 @@ clock = time.clock()
 
 img_writer = image.ImageWriter("/stream.bin")
 
-# Red LED on means we are capturing frames.
+# Red LED on means we are capturing camera.
 red_led = pyb.LED(1)
 red_led.on()
 

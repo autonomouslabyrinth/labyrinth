@@ -29,7 +29,7 @@ while(True):
     print("Saved background image - Now detecting motion!")
     pyb.LED(BLUE_LED_PIN).on()
 
-    diff = 10 # We'll say we detected motion after 10 frames of motion.
+    diff = 10 # We'll say we detected motion after 10 camera of motion.
     while(diff):
         img = sensor.snapshot()
         img.difference("temp/bg.bmp")

@@ -1,14 +1,14 @@
 from board.board import Board
-from frames.frames import Frames
+from camera.camera import Camera
 from ball.ball import Ball
 from servo.servo import Servos
 
 
 def run():
     # Initialize objects
-    frms = Frames()
-    brd = Board(frms.top())
-    bal = Ball(frms.top())
+    cam = Camera()
+    brd = Board(cam.data())
+    bal = Ball(cam.data())
     srvs = Servos()      # TODO: pass in param to initializer
 
     # Loop until finished
@@ -24,7 +24,7 @@ def run():
         srvs.move(bal, pnt)
 
         # Update
-        bal.update(frms.top())
+        bal.update(cam.data())
 
 
 if __name__ == "__main__":
