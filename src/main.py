@@ -7,8 +7,10 @@ from servo.servo import Servos
 def run():
     # Initialize objects
     cam = Camera()
-    brd = Board(cam.data())
+    print(cam.data())
+"""
     bal = Ball(cam.data())
+    brd = Board(cam.data())
     srvs = Servos()      # TODO: pass in param to initializer
 
     # Loop until finished
@@ -25,7 +27,7 @@ def run():
 
         # Update
         bal.update(cam.data())
-
+"""
 
 if __name__ == "__main__":
     run()

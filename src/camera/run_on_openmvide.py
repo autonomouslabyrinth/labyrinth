@@ -18,7 +18,6 @@ usb = USB_VCP()
 
 # Send X,Y
 while(True):
-    clock.tick()
     img = sensor.snapshot()
     for blob in img.find_blobs(thresholds, pixels_threshold=25, area_threshold=25, merge=True):
 

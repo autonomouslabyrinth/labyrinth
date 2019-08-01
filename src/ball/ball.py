@@ -1,4 +1,3 @@
-import sensor
 from board.board import Lines
 
 
